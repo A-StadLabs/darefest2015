@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ![](https://cloud.githubusercontent.com/assets/110953/7877439/6a69d03e-0590-11e5-9fac-c614246606de.png)
 ## Polymer Starter Kit
 
@@ -366,4 +365,3 @@ Polymer Starter Kit is a new project and is an ongoing effort by the Web Compone
 =======
 # darefest2015
 A little app to report our findings to the homefront at city of antwerp
->>>>>>> 80c6edaf48ae048b1e32a0ce20947b559d4e7d2c
