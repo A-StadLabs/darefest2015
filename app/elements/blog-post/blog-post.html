@@ -22,9 +22,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         color: red;
       }
     </style>
-    <content id="mainTitle"></content>
-    <content id="mainTime"></content>
-    <content id="mainBody"></content>
+    <content select="[ha]"></content>
+    <iron-collapse opened="{{foo}}">
+    <content select="[bee]"></content>
+    </iron-collapse>
   </template>
   <script>
   (function() {
@@ -35,10 +36,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       properties: {
         foo: {
-          type: String,
-          value: 'blog-post',
+          type: Boolean,
+          value: false,
           notify: true
         }
+      },
+
+      listeners: {
+        'tap': 'toggle'
+      },
+
+      toggle: function(){
+        this.foo = !this.foo;
       }
     });
   })();
