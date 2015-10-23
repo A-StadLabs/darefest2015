@@ -15,16 +15,44 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <style>
       :host {
         display: block;
+        @apply(--layout-vertical);
+        @apply(--layout-center);
       }
 
-      img {
-        width: 50px;
-        height: 50px;
+      .stage {
+        @apply(--layout-vertical);
+        @apply(--layout-start);
       }
+
+      .avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .avatar img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .name {
+        color: var(--le-orange);
+        font-family: SourceSansBold;
+        margin: 20px 0px 0px 0px;
+        padding: 0px; 
+      }
+
+
     </style>
-    <div>
-    <img src="{{image}}" />
-    <content></content>
+    <div class="stage">
+      <div class="avatar">
+        <img src="{{image}}" />
+      </div>
+    <p class="name">
+      <content></content>
+    </p>
+
     </div>
   </template>
   <script>
