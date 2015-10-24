@@ -16,17 +16,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       :host {
         display: block;
         @apply(--layout-vertical);
-        @apply(--layout-center);
+        @apply(--layout-start);
+        width: 100%;
       }
 
       .stage {
         @apply(--layout-vertical);
         @apply(--layout-start);
+        padding-bottom: 10px;
       }
 
       .avatar {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
         overflow: hidden;
       }
@@ -39,7 +41,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       .name {
         color: var(--le-orange);
         font-family: SourceSansBold;
-        margin: 20px 0px 0px 0px;
+        margin: 10px 0px 0px 0px;
         padding: 0px; 
       }
 

@@ -55,13 +55,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
 
 
+
+
   blog-post {
     border-bottom: 1px solid grey;
     width: 90%;
     max-width: 900px;
     margin: 0px 0px 20px 0px;
-/*    padding: 0px 0px 20px 0px;
-*/
+    padding: 20px 0px 0px 0px;
+
   }
 
   .speakerinfo {
@@ -70,9 +72,40 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       width: 30%;
       max-width: 120px;
-
       border-bottom: 4px solid black;
   }
+
+
+  .descr {
+    @apply(--layout-horizontal);
+    @apply(--layout-center);
+
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+   }
+
+  .descr p {
+    font-family: SourceSansLight;
+    -webkit-font-smoothing: antialiased;
+    font-size: 22px;
+    margin: 0px;
+    padding: 0px;
+      width: 100%;
+
+   }
+
+  .white {
+      width: 30%;
+      max-width: 120px;
+      height: 100%;
+      background-color: var(--le-orange);
+      opacity: 0;
+      margin-right: 30px;
+      padding: 0px;
+
+    }
+
 
     @font-face {
         font-family: Arvo;

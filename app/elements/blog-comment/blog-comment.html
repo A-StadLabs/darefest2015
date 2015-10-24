@@ -15,13 +15,88 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <style>
       :host {
         display: block;
+        margin: 15px 0px 15px 0px;
       }
+    .container {
+      width: 100%;
+      @apply(--layout-horizontal);
+      @apply(--layout-center);
+
+      margin: 0px;
+      padding: 0px;
+      height: 100%;
+    }
+
+
+  .white {
+      width: 30%;
+      max-width: 120px;
+      height: 100%;
+      background-color: var(--le-orange);
+      opacity: 0;
+      margin-right: 30px;
+      padding: 0px;
+
+    }
+
+
+    .commentbox {
+      width: 70%;
+      @apply(--layout-horizontal);
+      @apply(--layout-start);
+    }
+
+
+    .avatarbox {
+      @apply(--layout-vertical);
+      @apply(--layout-start);
+      min-width: 90px;
+    }
+
+      .name {
+        color: #333333;
+        font-family: SourceSansBold;
+        margin: 10px 0px 0px 0px;
+        padding: 0px; 
+      }
+
+      .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .avatar img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .comment {
+        padding: 10px;
+        box-sizing:border-box;
+        background-color: var(--le-orange);
+
+      }
+
     </style>
-    <div>
-      <img src="{{avatar}}" />
-      <h1>{{user}}</h1>
+<div class="container">
+    <div class="white">.</div>
+
+    <div class="commentbox">
+
+      <div class="avatarbox">
+        <div class="avatar">
+          <img src="{{avatar}}" />
+        </div>
+        <p class="name">{{user}}</p>
+      </div>
+      <div>
       <content></content>
     </div>
+</div>
+
+
   </template>
   <script>
   (function() {
