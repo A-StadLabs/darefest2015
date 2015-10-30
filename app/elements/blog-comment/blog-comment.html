@@ -15,37 +15,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <style>
       :host {
         display: block;
-        margin: 15px 0px 15px 0px;
+        margin: 2px 0px 2px 0px;
       }
+
+
     .container {
       width: 100%;
       @apply(--layout-horizontal);
-      @apply(--layout-center);
+      @apply(--layout-start);
 
       margin: 0px;
-      padding: 0px;
       height: 100%;
+      box-sizing:border-box;
+      padding: 5px;
     }
 
 
-  .white {
-      width: 30%;
-      max-width: 120px;
-      height: 100%;
-      background-color: var(--le-orange);
-      opacity: 0;
-      margin-right: 30px;
-      padding: 0px;
-
-    }
-
-
+/*
     .commentbox {
       width: 70%;
       @apply(--layout-horizontal);
       @apply(--layout-start);
     }
-
+*/
 
     .avatarbox {
       @apply(--layout-vertical);
@@ -53,11 +45,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       min-width: 90px;
     }
 
+
+
+    .pijltje {
+      min-width: 20px;
+    }
+
+
       .name {
         color: #333333;
         font-family: SourceSansBold;
         margin: 10px 0px 0px 0px;
         padding: 0px; 
+        font-size: 12px;
       }
 
       .avatar {
@@ -75,25 +75,31 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       .comment {
         padding: 10px;
         box-sizing:border-box;
-        background-color: var(--le-orange);
-
+        background-color: rgba(0,0,0,0.075);
+        color: var(--le-orange);
       }
 
     </style>
 <div class="container">
-    <div class="white">.</div>
-
-    <div class="commentbox">
 
       <div class="avatarbox">
         <div class="avatar">
-          <img src="{{avatar}}" />
+          <img src="{{avatar}}"/>
         </div>
         <p class="name">{{user}}</p>
       </div>
-      <div>
-      <content></content>
-    </div>
+
+      <div class="pijltje">
+        <svg version="1.1" id="Laag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           width="20px" height="20px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+        <polygon fill="rgba(0,0,0,0.075)" points="20,20 0,0 20,0 "/>
+        </svg>
+      </div>
+
+      <div class="comment">
+        <content></content>
+      </div>
+
 </div>
 
 
